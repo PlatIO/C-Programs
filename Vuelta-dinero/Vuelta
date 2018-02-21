@@ -1,0 +1,162 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    float cambiar = 0;
+    int canc;
+    int biquin = 0;
+    int bidosc = 0;
+    int bicien = 0;
+    int bicincu = 0;
+    int bivein = 0;
+    int bidiez = 0;
+    int bicinco = 0;
+    int doseur = 0;
+    int uneur = 0;
+    int cincuentacent = 0;
+    int veintecent = 0;
+    int diezcent = 0;
+    int cincocent = 0;
+    int doscent = 0;
+    int uncent = 0;
+
+
+    printf("Bienvenido a la maquina de cambio automatico\n");
+    printf("Ingrese cantidad a devolver:\n");
+    scanf("%f",&cambiar);
+    if(cambiar == 1){
+    printf("Ha seleccionado una cantidad de 1 euro\n");
+    }
+    else printf("Ha seleccionado una cantidad de %.2f euros\n",cambiar);
+
+    printf("Si no es esa la cantidad deseada, cancele la operacion ahora escribiendo 0\n");
+    scanf("%f", &canc);
+    if(canc == 0){
+        printf("Escriba de nuevo su cantidad:\n");
+        cambiar = 0;
+        scanf("%f",&cambiar);
+
+
+
+    }
+     printf("Procediendo al cambio de la cantidad de %.2f euros\n", cambiar);
+
+     //___________________________________________________________________________________________________________
+     //___________________________________________________CAMBIO__________________________________________________
+
+      if(cambiar >= 500){
+            while(cambiar >= 500){
+                cambiar -= 500;
+                biquin++;
+            }
+
+      }
+      if(cambiar >= 200){
+             while(cambiar >= 200){
+                cambiar -= 200;
+                bidosc++;
+             }
+      }
+      if(cambiar >= 100){
+        while(cambiar >= 100){
+            cambiar -= 100;
+            bicien++;
+        }
+      }
+      if(cambiar >= 50){
+        while(cambiar >= 50){
+            cambiar -= 50;
+            bicincu++;
+        }
+      }
+       if(cambiar >= 20){
+        while(cambiar >= 20){
+            cambiar -= 20;
+            bivein++;
+        }
+      }
+       if(cambiar >= 10){
+        while(cambiar >= 10){
+            cambiar -= 10;
+            bidiez++;
+        }
+      }
+       if(cambiar >= 5){
+        while(cambiar >= 5){
+            cambiar -= 5;
+            bicinco++;
+        }
+      }
+      printf("Billetes:\n");
+      printf("500 = %d\n", biquin);
+      printf("200 = %d\n", bidosc);
+      printf("100 = %d\n", bicien);
+      printf("50 = %d\n", bicincu);
+      printf("20 = %d\n", bivein);
+      printf("10 = %d\n", bidiez);
+      printf("5 = %d\n", bicinco);
+      printf("Suelto = %.2f\n", cambiar);
+
+      if(cambiar >= 2){
+        while(cambiar >= 2){
+            cambiar -= 2;
+            doseur++;
+        }
+      }
+       if(cambiar >= 1){
+        while(cambiar >= 1){
+            cambiar -= 1;
+            uneur++;
+        }
+      }
+      if(cambiar >= 0.5){
+        while(cambiar >= 0.5){
+            cambiar -= 0.5;
+            cincuentacent++;
+        }
+      }
+      if(cambiar >= 0.2){
+        while(cambiar >= 0.2){
+            cambiar -= 0.2;
+            veintecent++;
+        }
+      }
+      if(cambiar >= 0.1){
+        while(cambiar >= 0.1){
+            cambiar -= 0.1;
+            diezcent++;
+        }
+      }
+      if(cambiar >= 0.05){
+        while(cambiar >= 0.05){
+            cambiar -= 0.05;
+            cincocent++;
+        }
+      }
+      if(cambiar >= 0.02){
+        while(cambiar >= 0.02){
+            cambiar -= 0.02;
+            doscent++;
+        }
+      }
+      if(cambiar >= 0.01){
+        while(cambiar >= 0.01){
+            cambiar -= 0.01;
+            uncent++;
+        }
+      }
+      printf("Monedas:\n");
+      printf("2 = %d\n", doseur);
+      printf("1 = %d\n", uneur);
+      printf("50c = %d\n", cincuentacent);
+      printf("20c = %d\n", veintecent);
+      printf("10c = %d\n", diezcent);
+      printf("5c = %d\n", cincocent);
+      printf("2c = %d\n", doscent);
+      printf("1c = %d\n", uncent);
+      printf("A devolver = %.2f\n", cambiar);
+
+    return 0;
+}
